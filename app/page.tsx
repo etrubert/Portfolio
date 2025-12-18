@@ -192,36 +192,90 @@ export default function Home() {
                 key={projet.id}
                 className="group border border-accent-beige/20 hover:border-accent-beige/60 transition-all duration-300 p-8 md:p-10 flex flex-col"
               >
-                <div className="mb-6">
-                  <span className="text-sm md:text-base font-sans text-accent-beige uppercase tracking-wider">
-                    {projet.categorie}
-                  </span>
-                </div>
+                {projet.id === 1 && (
+                  <>
+                    <div className="mb-6 flex justify-center items-center">
+                      <Image
+                        src="/projet n°1-lookerstudio.png"
+                        alt="Dashboard Looker Studio"
+                        width={300}
+                        height={200}
+                        className="w-auto h-auto max-w-[280px] object-contain rounded"
+                      />
+                    </div>
+                    <p className="text-cream/80 font-sans text-sm md:text-base leading-relaxed mb-6 text-center">
+                      Lors de ce projet on a répondu a la problématique.<br />
+                      Analyse Géographique et Temporelle. L'objectif : Comprendre les marchés les plus rentables et les périodes de l'année/journée où les performances sont maximales.
+                    </p>
+                    <div className="mt-auto">
+                      <a
+                        href="https://lookerstudio.google.com/u/0/reporting/aa7d9a8d-6a52-47e0-a456-27d7eaae94fc/page/usKhF"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-button inline-block w-full text-center px-6 py-3 border-2 border-accent-beige text-accent-beige font-sans text-sm md:text-base font-medium uppercase tracking-wider hover:text-accent-taupe hover:bg-accent-beige/10 transition-all"
+                      >
+                        Voir le Dashboard →
+                      </a>
+                    </div>
+                  </>
+                )}
 
-                <h2 className="font-serif text-3xl md:text-4xl text-cream mb-4 group-hover:text-accent-beige transition-colors">
-                  {projet.titre}
-                </h2>
+                {projet.id !== 1 && (
+                  <>
+                    {projet.id === 2 && (
+                      <div className="mb-6 flex justify-center items-center">
+                        <Image
+                          src="/projet n°2-lookestudio.png"
+                          alt="Dashboard Looker Studio"
+                          width={300}
+                          height={200}
+                          className="w-auto h-auto max-w-[280px] object-contain rounded"
+                        />
+                      </div>
+                    )}
+                    <div className="mb-6">
+                      <span className="text-sm md:text-base font-sans text-accent-beige uppercase tracking-wider">
+                        {projet.categorie}
+                      </span>
+                    </div>
 
-                <p className="text-cream/80 font-sans text-base md:text-lg leading-relaxed mb-8 flex-grow">
-                  {projet.description}
-                </p>
+                    <h2 className="font-serif text-3xl md:text-4xl text-cream mb-4 group-hover:text-accent-beige transition-colors">
+                      {projet.titre}
+                    </h2>
 
-                <div className="flex flex-wrap gap-3 mb-6">
-                  {projet.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="text-sm md:text-base font-sans text-cream/60 border border-cream/20 px-3 py-2"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                    <p className="text-cream/80 font-sans text-base md:text-lg leading-relaxed mb-8 flex-grow">
+                      {projet.description}
+                    </p>
 
-                <div className="mt-auto pt-6 border-t border-accent-beige/10">
-                  <span className="text-accent-beige text-base md:text-lg font-sans uppercase tracking-wider group-hover:underline cursor-pointer">
-                    En savoir plus →
-                  </span>
-                </div>
+                    <div className="flex flex-wrap gap-3 mb-6">
+                      {projet.technologies.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="text-sm md:text-base font-sans text-cream/60 border border-cream/20 px-3 py-2"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="mt-auto pt-6 border-t border-accent-beige/10">
+                      {projet.id === 2 ? (
+                        <a
+                          href="https://lookerstudio.google.com/u/0/reporting/e17e159d-192f-452d-a8bc-383f26227f5e/page/43XiF"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cta-button inline-block w-full text-center px-6 py-3 border-2 border-accent-beige text-accent-beige font-sans text-sm md:text-base font-medium uppercase tracking-wider hover:text-accent-taupe hover:bg-accent-beige/10 transition-all"
+                        >
+                          Voir le Dashboard →
+                        </a>
+                      ) : (
+                        <span className="text-accent-beige text-base md:text-lg font-sans uppercase tracking-wider group-hover:underline cursor-pointer">
+                          En savoir plus →
+                        </span>
+                      )}
+                    </div>
+                  </>
+                )}
               </div>
             ))}
           </div>
