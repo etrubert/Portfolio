@@ -220,19 +220,8 @@ export default function Home() {
                   </>
                 )}
 
-                {projet.id !== 1 && (
+                {projet.id !== 1 && projet.id !== 2 && projet.id !== 3 && projet.id !== 4 && (
                   <>
-                    {projet.id === 2 && (
-                      <div className="mb-6 flex justify-center items-center">
-                        <Image
-                          src="/projet n°2-lookestudio.png"
-                          alt="Dashboard Looker Studio"
-                          width={300}
-                          height={200}
-                          className="w-auto h-auto max-w-[280px] object-contain rounded"
-                        />
-                      </div>
-                    )}
                     <div className="mb-6">
                       <span className="text-sm md:text-base font-sans text-accent-beige uppercase tracking-wider">
                         {projet.categorie}
@@ -259,20 +248,90 @@ export default function Home() {
                     </div>
 
                     <div className="mt-auto pt-6 border-t border-accent-beige/10">
-                      {projet.id === 2 ? (
-                        <a
-                          href="https://lookerstudio.google.com/u/0/reporting/e17e159d-192f-452d-a8bc-383f26227f5e/page/43XiF"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cta-button inline-block w-full text-center px-6 py-3 border-2 border-accent-beige text-accent-beige font-sans text-sm md:text-base font-medium uppercase tracking-wider hover:text-accent-taupe hover:bg-accent-beige/10 transition-all"
-                        >
-                          Voir le Dashboard →
-                        </a>
-                      ) : (
-                        <span className="text-accent-beige text-base md:text-lg font-sans uppercase tracking-wider group-hover:underline cursor-pointer">
-                          En savoir plus →
-                        </span>
-                      )}
+                      <span className="text-accent-beige text-base md:text-lg font-sans uppercase tracking-wider group-hover:underline cursor-pointer">
+                        En savoir plus →
+                      </span>
+                    </div>
+                  </>
+                )}
+
+                {projet.id === 4 && (
+                  <>
+                    <div className="mb-6 flex justify-center items-center">
+                      <Image
+                        src="/Neogen-ia.png"
+                        alt="Neogen-ia"
+                        width={300}
+                        height={200}
+                        className="w-auto h-auto max-w-[280px] object-contain rounded"
+                      />
+                    </div>
+                    <p className="text-cream/80 font-sans text-sm md:text-base leading-relaxed mb-6">
+                      Pour le projet final d'IA Génératif, on a du créer deux article grace a l'intelligence artificiel. C'est article on était créer pour que l'école puisse le publier.
+                    </p>
+                    <div className="mt-auto">
+                      <a
+                        href="https://www.canva.com/design/DAG5hMHPxik/OT_jscfoh5PY4F3Qui9Wyg/edit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-button inline-block w-full text-center px-6 py-3 border-2 border-accent-beige text-accent-beige font-sans text-sm md:text-base font-medium uppercase tracking-wider hover:text-accent-taupe hover:bg-accent-beige/10 transition-all"
+                      >
+                        Voir le Projet →
+                      </a>
+                    </div>
+                  </>
+                )}
+
+                {projet.id === 3 && (
+                  <>
+                    <div className="mb-6 flex justify-center items-center">
+                      <Image
+                        src="/FairWay.png"
+                        alt="FairWay App"
+                        width={300}
+                        height={200}
+                        className="w-auto h-auto max-w-[280px] object-contain rounded"
+                      />
+                    </div>
+                    <p className="text-cream/80 font-sans text-sm md:text-base leading-relaxed mb-6">
+                      Lors de notre cours Stratégie D'entreprise, on a du créer une strat-up de notre choix. Nous nous avons choisie de proposer une stratt-up pour démocratiser le golf en France.
+                    </p>
+                    <div className="mt-auto">
+                      <a
+                        href="https://www.canva.com/design/DAG4BiapqTE/YwuPX04HUsRogah7VHRD-Q/view?utm_content=DAG4BiapqTE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0b17a096bc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-button inline-block w-full text-center px-6 py-3 border-2 border-accent-beige text-accent-beige font-sans text-sm md:text-base font-medium uppercase tracking-wider hover:text-accent-taupe hover:bg-accent-beige/10 transition-all"
+                      >
+                        Voir le Projet →
+                      </a>
+                    </div>
+                  </>
+                )}
+
+                {projet.id === 2 && (
+                  <>
+                    <div className="mb-6 flex justify-center items-center">
+                      <Image
+                        src="/projet n°2-lookestudio.png"
+                        alt="Dashboard Looker Studio"
+                        width={300}
+                        height={200}
+                        className="w-auto h-auto max-w-[280px] object-contain rounded"
+                      />
+                    </div>
+                    <p className="text-cream/80 font-sans text-sm md:text-base leading-relaxed mb-6 text-center">
+                      J'ai répondu au sujet : Société de Fournitures de Bureau / E-commerce 📝 (Analyse de la Rentabilité). La problematique utiliser est P1. Les remises que nous accordons sont-elles profitables ou destructrices de valeur ?
+                    </p>
+                    <div className="mt-auto">
+                      <a
+                        href="https://lookerstudio.google.com/u/0/reporting/e17e159d-192f-452d-a8bc-383f26227f5e/page/43XiF"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-button inline-block w-full text-center px-6 py-3 border-2 border-accent-beige text-accent-beige font-sans text-sm md:text-base font-medium uppercase tracking-wider hover:text-accent-taupe hover:bg-accent-beige/10 transition-all"
+                      >
+                        Voir le Dashboard →
+                      </a>
                     </div>
                   </>
                 )}
