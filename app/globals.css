@@ -69,9 +69,9 @@ body {
 /* Effet de texture pour le fond hero */
 .hero-background {
   position: relative;
-  background-image: url('/hero-image.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: url('/Photo.JPG');
+  background-size: 40%;
+  background-position: center 20%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -83,8 +83,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.3);
   pointer-events: none;
+  z-index: 1;
 }
 
 @keyframes gradientShift {
