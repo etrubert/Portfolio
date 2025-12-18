@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Palette de couleurs premium */
+  --color-dark-bg: #000000;
+  --color-dark-bg-alt: #0a0a0a;
+  --color-text-cream: #f0f0f0;
+  --color-accent-beige: #C0A080;
+  --color-accent-taupe: #B49B7E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: var(--color-text-cream);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Styles pour les liens de navigation */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-accent-beige);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--color-accent-beige);
+}
+
+/* Styles pour le bouton CTA */
+.cta-button {
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: rgba(192, 160, 128, 0.1);
+  border-color: var(--color-accent-taupe);
+  transform: translateY(-2px);
+}
+
+/* Effet de texture pour le fond hero */
+.hero-background {
+  position: relative;
+  background-image: url('/hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
