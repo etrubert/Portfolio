@@ -554,13 +554,18 @@ export default function Home() {
             <h2 className="font-serif text-3xl md:text-4xl text-accent-beige mb-8">Autres moyens de contact</h2>
             <div className="space-y-6 text-cream/80 font-sans text-lg md:text-xl">
               <p>
-                <span className="text-accent-beige font-medium">Email :</span> contact@portfolio.com
+                <span className="text-accent-beige font-medium">Email :</span> elyot3112@gmail.com
               </p>
               <p>
-                <span className="text-accent-beige font-medium">LinkedIn :</span> /in/votre-profil
-              </p>
-              <p>
-                <span className="text-accent-beige font-medium">Disponibilité :</span> Réponse sous 24-48h
+                <span className="text-accent-beige font-medium">LinkedIn :</span>{' '}
+                <a
+                  href="https://www.linkedin.com/in/elyot-trubert-965070382/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cream/80 hover:text-accent-beige transition-colors underline"
+                >
+                  https://www.linkedin.com/in/elyot-trubert-965070382/
+                </a>
               </p>
             </div>
           </div>
