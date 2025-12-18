@@ -57,7 +57,7 @@ export default function Navbar() {
             onClick={() => scrollToSection('accueil')}
             className="font-serif text-3xl md:text-4xl font-bold text-cream hover:text-accent-beige transition-colors duration-300 cursor-pointer"
           >
-            Hôme
+            Accueil
           </button>
 
           {/* Liens de navigation à droite */}

@@ -68,6 +68,20 @@ export default function Home() {
       technologies: ['React Native', 'Expo', 'GraphQL', 'Apollo'],
       categorie: 'Mobile',
     },
+    {
+      id: 7,
+      titre: 'Nouveau Projet 1',
+      description: 'Description du nouveau projet 1.',
+      technologies: ['Tech 1', 'Tech 2', 'Tech 3'],
+      categorie: 'Catégorie 1',
+    },
+    {
+      id: 8,
+      titre: 'Nouveau Projet 2',
+      description: 'Description du nouveau projet 2.',
+      technologies: ['Tech 1', 'Tech 2', 'Tech 3'],
+      categorie: 'Catégorie 2',
+    },
   ]
 
   return (
@@ -220,7 +234,7 @@ export default function Home() {
                   </>
                 )}
 
-                {projet.id !== 1 && projet.id !== 2 && projet.id !== 3 && projet.id !== 4 && (
+                {projet.id !== 1 && projet.id !== 2 && projet.id !== 3 && projet.id !== 4 && projet.id !== 5 && projet.id !== 6 && projet.id !== 7 && projet.id !== 8 && (
                   <>
                     <div className="mb-6">
                       <span className="text-sm md:text-base font-sans text-accent-beige uppercase tracking-wider">
@@ -251,6 +265,114 @@ export default function Home() {
                       <span className="text-accent-beige text-base md:text-lg font-sans uppercase tracking-wider group-hover:underline cursor-pointer">
                         En savoir plus →
                       </span>
+                    </div>
+                  </>
+                )}
+
+                {projet.id === 8 && (
+                  <>
+                    <div className="mb-6 flex justify-center items-center">
+                      <Image
+                        src="/Vision Vox.png"
+                        alt="Vision Vox"
+                        width={300}
+                        height={200}
+                        className="w-auto h-auto max-w-[280px] object-contain rounded"
+                      />
+                    </div>
+                    <p className="text-cream/80 font-sans text-sm md:text-base leading-relaxed mb-6">
+                      Vision Vox, est mon projet que j'ai du réaliser pendant mais deux semaine d'immersion.
+                    </p>
+                    <div className="mt-auto">
+                      <a
+                        href="https://www.canva.com/design/DAGyq6NZa0M/fJ0wKOkxYh9YX-vsoP9O8g/view?utm_content=DAGyq6NZa0M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0d9b984a7f"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-button inline-block w-full text-center px-6 py-3 border-2 border-accent-beige text-accent-beige font-sans text-sm md:text-base font-medium uppercase tracking-wider hover:text-accent-taupe hover:bg-accent-beige/10 transition-all"
+                      >
+                        Voir le Projet →
+                      </a>
+                    </div>
+                  </>
+                )}
+
+                {projet.id === 7 && (
+                  <>
+                    <div className="mb-6 flex justify-center items-center">
+                      <Image
+                        src="/Association Podcast.png"
+                        alt="Association Podcast"
+                        width={300}
+                        height={200}
+                        className="w-auto h-auto max-w-[280px] object-contain rounded"
+                      />
+                    </div>
+                    <p className="text-cream/80 font-sans text-sm md:text-base leading-relaxed mb-6">
+                      C'était ma premiere étape dans une association pendant lais étude chez Eugénia. Vous verrez aussi tout mais collaborateur qui mon aider a monter cette association.
+                    </p>
+                    <div className="mt-auto">
+                      <a
+                        href="https://www.canva.com/design/DAGyBac4ew0/OgnCGFA72Dih-kUrkX-jDA/view?utm_content=DAGyBac4ew0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc6f38b7a81"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-button inline-block w-full text-center px-6 py-3 border-2 border-accent-beige text-accent-beige font-sans text-sm md:text-base font-medium uppercase tracking-wider hover:text-accent-taupe hover:bg-accent-beige/10 transition-all"
+                      >
+                        Voir le Projet →
+                      </a>
+                    </div>
+                  </>
+                )}
+
+                {projet.id === 6 && (
+                  <>
+                    <div className="mb-6 flex justify-center items-center">
+                      <Image
+                        src="/SQL.png"
+                        alt="Projet SQL Fondamentaux"
+                        width={300}
+                        height={200}
+                        className="w-auto h-auto max-w-[280px] object-contain rounded"
+                      />
+                    </div>
+                    <p className="text-cream/80 font-sans text-sm md:text-base leading-relaxed mb-6">
+                      Ce projet de SQL représente les fondamentaux du SQL. On devait faire deux automatisitoin pour aidez Stéphane pour classer les élève.
+                    </p>
+                    <div className="mt-auto">
+                      <a
+                        href="https://www.canva.com/design/DAG5EUOwYcs/zPqTAUZxm3OqKXlOKUKz-g/view?utm_content=DAG5EUOwYcs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h903bb558a3"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-button inline-block w-full text-center px-6 py-3 border-2 border-accent-beige text-accent-beige font-sans text-sm md:text-base font-medium uppercase tracking-wider hover:text-accent-taupe hover:bg-accent-beige/10 transition-all"
+                      >
+                        Voir le Projet →
+                      </a>
+                    </div>
+                  </>
+                )}
+
+                {projet.id === 5 && (
+                  <>
+                    <div className="mb-6 flex justify-center items-center">
+                      <Image
+                        src="/Respire.png"
+                        alt="Respire"
+                        width={300}
+                        height={200}
+                        className="w-auto h-auto max-w-[280px] object-contain rounded"
+                      />
+                    </div>
+                    <p className="text-cream/80 font-sans text-sm md:text-base leading-relaxed mb-6">
+                      Respire était notre premier Projet Finaux de l'anné en Merkating Stratégique. Notre sujet était Respire
+                    </p>
+                    <div className="mt-auto">
+                      <a
+                        href="https://www.canva.com/design/DAG0h-9Ush8/0KktKZLzafLGmcmtfhfCmg/view?utm_content=DAG0h-9Ush8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h464b1f374d"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-button inline-block w-full text-center px-6 py-3 border-2 border-accent-beige text-accent-beige font-sans text-sm md:text-base font-medium uppercase tracking-wider hover:text-accent-taupe hover:bg-accent-beige/10 transition-all"
+                      >
+                        Voir le Projet →
+                      </a>
                     </div>
                   </>
                 )}
