@@ -66,24 +66,37 @@ export default function Home() {
   return (
     <>
       {/* Section Hero */}
-      <section id="accueil" className="hero-background min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="text-center z-10 px-6 sm:px-8 max-w-4xl mx-auto w-full">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-cream mb-6 tracking-tight uppercase">
+      <section id="accueil" className="hero-background min-h-screen flex items-center justify-start relative overflow-hidden">
+        {/* Image de fond à droite */}
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 md:w-2/5 lg:w-1/3 z-0">
+          <div className="relative w-full h-full">
+            <Image
+              src="/Photo.JPG"
+              alt="Elyot Tubert"
+              fill
+              className="object-cover object-center"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent"></div>
+          </div>
+        </div>
+        
+        <div className="text-left z-10 px-6 sm:px-8 max-w-4xl w-full relative">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-cream mb-5 tracking-tight uppercase">
             ELYOT TUBERT
           </h1>
-          <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl text-cream/80 mb-12 font-light tracking-wide">
+          <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl text-cream/80 mb-10 font-light tracking-wide">
             Étudiant chez Eugenia School
           </p>
           <a
             href="#histoire"
-            className="cta-button inline-block px-8 py-4 md:px-10 md:py-5 border-2 border-accent-beige text-accent-beige font-sans text-sm md:text-base font-medium uppercase tracking-wider hover:text-accent-taupe"
+            className="cta-button inline-block px-7 py-3.5 md:px-9 md:py-4 border-2 border-accent-beige text-accent-beige font-sans text-xs md:text-sm font-medium uppercase tracking-wider hover:text-accent-taupe"
           >
             Commencer mon Histoire
           </a>
-        </div>
-        
-        {/* Boutons LinkedIn, GitHub et Email en bas */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex items-center gap-3">
+          
+          {/* Boutons LinkedIn, GitHub et Email */}
+          <div className="mt-6 flex items-center gap-3">
           <a
             href="https://www.linkedin.com/in/elyot-trubert-965070382/"
             target="_blank"
@@ -137,6 +150,7 @@ export default function Home() {
               <polyline points="22,6 12,13 2,6" />
             </svg>
           </a>
+          </div>
         </div>
       </section>
 
@@ -517,7 +531,7 @@ export default function Home() {
                 elyot3112@gmail.com
               </a>
             </p>
-            <div className="pt-2 flex flex-col gap-3">
+            <div className="pt-2 flex flex-row gap-3">
               <a
                 href="https://www.linkedin.com/in/elyot-trubert-965070382/"
                 target="_blank"
